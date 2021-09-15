@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  web:
+    container_name: ${APP_NAME}
+    image: jjuanrivvera99/ubuntu18.04-apache2-php7.2-oracleclient12.2:latest
+    # image: adrianharabula/php7-with-oci8
+    ports:
+      - 7000:80
+    volumes:
+      - "./:/var/www"
